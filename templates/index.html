@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<h1>Welcome to Tran's Restaurant!</h1>
+<form action="#">
+  {% for dish in dishes %}
+  <div class="items">
+    <label for="{{dish.name}}">{{dish.name}}</label>
+    <input type="checkbox" name="{{dish.name}}" id="{{dish.name}}" />
+  </div>
+  {% endfor %}
+</form>
+{% endblock %}
